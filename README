@@ -1,0 +1,31 @@
+# SINGLETON app
+
+** Lets discuss some important concepts used in this task **
+
+1. How the instance is invoked....
+
+> Logger::instance()->newLine(2);
+
+2. How separator is used...
+
+> Logger::instance()->setSeparator("\t");
+
+```
+std::ostream *Logger::m_stream = &std::cout;
+
+*m_stream << m_separator;
+```
+
+3.Enum usages....
+
+```
+// union for multiple argument logging
+    mutable union currType_t
+    {
+        int i;
+        float f;
+        char c;
+        char *s;
+    } m_currType;
+
+```
